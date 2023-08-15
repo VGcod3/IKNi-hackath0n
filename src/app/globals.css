@@ -8,6 +8,10 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,12 +20,55 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.glitch-text {
+  animation: animate 2.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    text-shadow: -3px -3px 0 #02bcff, 3px 3px 0 #dc206c;
+  }
+
+  25% {
+    text-shadow: 3px 3px 0 #02bcff, -3px -3px 0 #dc206c;
+  }
+
+  50% {
+    text-shadow: 3px -3px 0 #02bcff, -3px 3px 0 #dc206c;
+  }
+
+  75% {
+    text-shadow: -3px 3px 0 #02bcff, 3px -3px 0 #dc206c;
+  }
+
+  100% {
+    text-shadow: 3px 3px 0 #02bcff, -3px -3px 0 #dc206c;
+  }
+}
+
+.neon-handwritten-text {
+  animation: neon-glow 1.5s linear infinite;
+}
+
+@keyframes neon-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #dcc620, 0 0 20px #dcdc20, 0 0 30px #dcc620;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #dcc620, 0 0 40px #dcc620, 0 0 60px #dcc620;
+  }
+}
+
+.btn {
+  @apply font-mono w-44 h-16 text-xl transition-all shadow-md hover:shadow-lg font-medium hover:scale-105;
+}
+
+.menu-point {
+  @apply cursor-pointer font-semibold leading-4 text-gray-50 font-mono  bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-my-pink to-my-blue hover:scale-125 transition-all;
+}
+
+.block-title {
+  @apply text-3xl sm:text-5xl md:text-6xl  text-center bg-gradient-to-r text-transparent bg-clip-text from-my-yellow via-orange-500 via-50% to-my-pink mb-20;
 }
