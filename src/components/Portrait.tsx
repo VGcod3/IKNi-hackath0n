@@ -17,7 +17,7 @@ export default function Portrait() {
                         <Image alt="avatar" className="rounded-full h-[400px] w-[400px] object-cover ring-2 ring-my-pink ring-offset-4 ring-offset-[#130c2c] shadow-xl shadow-my-pink" src={'/avatar.jpg'} width={400} height={400} />
                     </div>
                     <div className="col-span-1 text-xl font-mono flex flex-col gap-2 ">
-                        <h3 className="text-3xl text-center">Студент НУ "ЛП"</h3>
+                        <h3 className="text-3xl text-center">Студенти та учні</h3>
                         <h3 className="text-2xl text-center">Вік: 17-23</h3>
                         <span className="text-xl mt-6">Спеціальності</span>
                         <ul className="list-disc list-inside">
