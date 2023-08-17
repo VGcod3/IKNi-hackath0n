@@ -45,7 +45,7 @@ export default function Header({
                         <Dialog.Trigger asChild>
                             <button
                                 type="button"
-                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-grey-400"
                                 onClick={() => setMobileMenuOpen(true)}
                             >
                                 <HamburgerMenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -64,7 +64,7 @@ export default function Header({
                         ))}
                     </div>
                     <div className="hidden xl:flex xl:flex-1 xl:justify-end">
-                        <span onClick={() => handleScrollClick('#help')} className="cursor-pointer text-sm font-semibold leading-6 text-gray-200">
+                        <span onClick={() => handleScrollClick('#help')} className="cursor-pointer menu-point text-sm font-semibold leading-6 text-bg-grey-400">
                             Підтримати <span aria-hidden="true">&rarr;</span>
                         </span>
                     </div>
@@ -88,7 +88,7 @@ export default function Header({
                                     animate={{ x: '0%' }}
                                     exit={{ x: '100%' }}
                                     transition={{ duration: 0.2 }}
-                                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-r from-[#1e234d] from-65% to-[#1e204d] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200/10"
+                                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-my-bg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200/10"
                                 >
                                     <div>
                                         <div className="flex items-center justify-between">
@@ -113,7 +113,7 @@ export default function Header({
                                                                 handleScrollClick(item.href)
                                                             }}
                                                             key={item.name}
-                                                            className="cursor-pointer transition-all -mx-3 block  px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-gradient-to-r hover:shadow-my-pink from-yellow-600 from-30% via-orange-500 to-my-pink"
+                                                            className="cursor-pointer transition-all -mx-3 block  px-3 py-2.5 text-base font-semibold leading-7 text-neutral-200 hover:bg-green-500 border-green-500"
                                                         >
                                                             {item.name}
                                                         </span>
@@ -125,7 +125,7 @@ export default function Header({
                                                             setMobileMenuOpen(false);
                                                             handleScrollClick("#help")
                                                         }}
-                                                        className="cursor-pointer transition-all -mx-3 block  px-3 py-2.5 text-base font-semibold leading-7 text-gray-200 hover:bg-gradient-to-r hover:shadow-my-pink from-yellow-600 from-30% via-orange-500 to-my-pink"
+                                                        className="cursor-pointer transition-all -mx-3 block  px-3 py-2.5 text-base font-semibold leading-7 text-neutral-200 hover:bg-green-500  border-green-500 border-2"
                                                     >
                                                         Підтримати
                                                     </span>

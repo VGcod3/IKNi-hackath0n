@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'IT Quest 5.0',
-  description: 'IT Quest partnership broshure',
+  title: 'Hackath0n',
+  description: 'Hackathon partnership broshure',
 }
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className=''>
       <body>{children}</body>
     </html>
   )

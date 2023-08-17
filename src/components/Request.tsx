@@ -1,50 +1,93 @@
-import { train } from "@/app/fonts"
-
+import { tektur, rubik } from '@/app/fonts'
 import { CheckIcon } from "@radix-ui/react-icons"
+/* This example requires Tailwind CSS v2.0+ */
 
-const features = [
-    {
-        name: 'Перебування в офісі',
-        description: 'дозвіл на перебування протягом дня нашого активіста та команд-учасниць (загалом квест займає близько 5 годин)',
-    },
-    {
-        name: 'Завдання для учасників квесту',
-        description: 'до 30 хв, було б добре використати особливість Вашої компанії'
-    },
-    {
-        name: 'Презентація',
-        description: 'Презентуйте свою компанію в будь-якій формі',
-    },
-    {
-        name: 'Мерч',
-        description: 'Брендовані подарунки учасникам'
-    }
-]
+const pricing = {
+    tiers: [
+        {
+            title: 'Лайт',
+            description: 'набори типу: екобег, блокнот, ручка, стікер ( мінімум 12 штук) .',
+            features: ['згадка в пості зі всіма спонсорами', 'окремий пост  в телеграмі Хакатону', 'згадка в статті на сайті університету(якщо така буде)', 'можливість надати свого суддю '],
+            cta: 'Monthly billing',
+            mostPopular: false,
+        },
 
-export default function Request() {
+
+        {
+            title: 'Класік',
+            description: 'набори типу: термочашка, павер, худі, термос, рюкзак, блокнот (18 штук)',
+            features: [
+                'окремий пост  в телеграмі Хакатону ',
+                'згадка в статті на сайті університету(якщо така буде) ',
+                'можливість надати свого суддю ',
+                'реклама в телеграм каналі  ІКНІ (1 окремий пост) ',
+                'сторіс в інстаграмі ІКНІ',
+                'можливість презентації компанії на події',
+            ],
+            mostPopular: true,
+        },
+
+
+        {
+            title: 'Преміум',
+            description: 'курси навчальні в компанії, рюкзаки, чи щось інше з цінних подарунків',
+            features: [
+                'окремий пост  в телеграмі Хакатону ',
+                'згадка в статті на сайті університету(якщо така буде) ',
+                'можливість надати свого суддю ',
+                'реклама в телеграм каналі  ІКНІ (1 окремий пост) ',
+                'сторіс в інстаграмі ІКНІ',
+                'можливість презентації компанії на події',
+                'база контактів учасників ',
+            ],
+            mostPopular: false,
+        },
+    ],
+}
+
+function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+}
+
+export default function Example() {
     return (
+        <div className="mx-auto max-w-7xl bg-white py-24 px-4 sm:px-6 lg:px-8" id='request'>
+            <h2 className={`${tektur.className} text-3xl font-bold tracking-tight  text-gray-900 sm:text-5xl sm:leading-none lg:text-6xl`}>
+                Варіанти співпраці
+            </h2>
+            <p className="mt-6 max-w-2xl text-xl text-gray-500">
+                Оберіть пакет спонсорства, який підходить вам найбільше
+            </p>
 
-        <div className="bg-white" id='request'>
-            <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:py-24 lg:px-8">
-                <div>
-                    <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900">Що нам потрібно</h2>
-                    <p className="mt-4 text-lg text-gray-500">
-                        Яку допомогу від вас нам потрібно для успішного проведення проекту
-                    </p>
-                </div>
-                <div className="mt-12 lg:col-span-2 lg:mt-0">
-                    <dl className="space-y-10 sm:grid sm:grid-flow-col sm:grid-cols-2 grid-rows-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-8">
-                        {features.map((feature) => (
-                            <div key={feature.name} className="relative">
-                                <dt>
-                                    <CheckIcon className="absolute h-6 w-6 text-violet-500" aria-hidden="true" />
-                                    <p className="ml-9 text-lg font-medium leading-6 text-gray-900">{feature.name}</p>
-                                </dt>
-                                <dd className="mt-2 ml-9 text-base text-gray-500">{feature.description}</dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
+            {/* Tiers */}
+            <div className="mt-24 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+                {pricing.tiers.map((tier) => (
+                    <div
+                        key={tier.title}
+                        className="relative flex flex-col rounded-2xl border border-gray-200 bg-neutral-100 p-8 shadow-lg"
+                    >
+                        <div className="flex-1">
+                            <h3 className="text-3xl font-semibold text-gray-900">{tier.title}</h3>
+                            {tier.mostPopular ? (
+                                <p className="absolute top-0 -translate-y-1/2 transform rounded-full bg-green-500 py-1.5 px-4 text-sm font-semibold text-white">
+                                    Most popular
+                                </p>
+                            ) : null}
+
+                            <p className="mt-6 text-neutral-600 font-bold">{tier.description}</p>
+
+                            {/* Feature list */}
+                            <ul role="list" className="mt-6 space-y-4">
+                                {tier.features.map((feature) => (
+                                    <li key={feature} className="flex">
+                                        <CheckIcon className="h-6 w-6 flex-shrink-0 text-green-500" aria-hidden="true" />
+                                        <span className="ml-3 text-gray-500">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

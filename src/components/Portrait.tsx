@@ -14,7 +14,7 @@ export default function Portrait() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
                     <div className="mx-auto">
-                        <Image alt="avatar" className="rounded-full h-[400px] w-[400px] object-cover ring-2 ring-my-pink ring-offset-4 ring-offset-[#130c2c] shadow-xl shadow-my-pink" src={'/avatar.jpg'} width={400} height={400} />
+                        <Image alt="avatar" className="rounded-full h-[400px] w-[400px] object-cover ring-2 ring-green-500 ring-offset-4 ring-offset-[#130c2c] shadow-xl shadow-green-500" src={'/avatar.jpg'} width={400} height={400} />
                     </div>
                     <div className="col-span-1 text-xl font-mono flex flex-col gap-2 ">
                         <h3 className="text-3xl text-center">Студенти та учні</h3>
