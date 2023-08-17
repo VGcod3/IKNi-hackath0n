@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       <Portrait />
       <div className="bg-gradient-to-r from-[#0c0f2e] to-[#1d0829] px-4 0">
-        <hr className='opacity-1 h-1 bg-gradient-to-r rounded from-my-blue to-my-pink border-none max-w-4xl mx-auto p-0' />
+        <hr className='opacity-1 h-1 bg-gradient-to-r rounded from-green-500 to-teal-500 border-none max-w-4xl mx-auto p-0' />
       </div>
       <Partners />
       <Offer />

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -8,10 +9,11 @@ interface AnimatedElementProps {
     children: React.ReactElement;
     direction: Direction;
     duration?: number;
+    delay?: number;
     once?: boolean;
 }
 
-const AnimatedElement: React.FC<AnimatedElementProps> = ({ children, direction, duration = 0.5, once = false }) => {
+const AnimatedElement: React.FC<AnimatedElementProps> = ({ children, direction, delay = 0, duration = 0.5, once = false }) => {
     const [ref, inView] = useInView({
         triggerOnce: once,
         threshold: 0.2,
@@ -33,6 +35,7 @@ const AnimatedElement: React.FC<AnimatedElementProps> = ({ children, direction, 
 
     const animationTransition = {
         duration: duration,
+        delay: delay
     };
 
     return (

@@ -62,7 +62,7 @@
 }
 
 .btn {
-  @apply font-mono w-96 md:w-56 tracking-wider h-16 text-xl transition-all shadow-md hover:shadow-lg font-medium hover:scale-105;
+  @apply font-mono w-80 md:w-56 tracking-wider h-16 text-xl transition-all shadow-md hover:shadow-lg font-medium hover:scale-105;
 }
 
 .menu-point {
