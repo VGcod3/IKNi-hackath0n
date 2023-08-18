@@ -97,7 +97,7 @@ export default function HeroSection() {
 
                                 <button
                                     className={`bg-gradient-to-r from-my-lime to-green-600 btn hover:shadow-green-500 shadow-green-400`}>
-                                    <span className='cursor-pointer' onClick={() => handleScrollClick('#help')}>Підтримати</span>
+                                    <span className='cursor-pointer' onClick={() => handleScrollClick('#request')}>Підтримати</span>
                                 </button>
                             </AnimatedElement>
                             <AnimatedElement direction='bottom'>

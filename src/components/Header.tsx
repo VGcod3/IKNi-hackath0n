@@ -64,7 +64,7 @@ export default function Header({
                         ))}
                     </div>
                     <div className="hidden xl:flex xl:flex-1 xl:justify-end">
-                        <span onClick={() => handleScrollClick('#help')} className="cursor-pointer menu-point text-sm font-semibold leading-6 text-bg-grey-400">
+                        <span onClick={() => handleScrollClick('#request')} className="cursor-pointer menu-point text-sm font-semibold leading-6 text-bg-grey-400">
                             Підтримати <span aria-hidden="true">&rarr;</span>
                         </span>
                     </div>
@@ -123,7 +123,7 @@ export default function Header({
                                                     <span
                                                         onClick={() => {
                                                             setMobileMenuOpen(false);
-                                                            handleScrollClick("#help")
+                                                            handleScrollClick("#request")
                                                         }}
                                                         className="cursor-pointer transition-all -mx-3 block  px-3 py-2.5 text-base font-semibold leading-7 text-neutral-200 hover:bg-green-500  border-green-500 border-2"
                                                     >
