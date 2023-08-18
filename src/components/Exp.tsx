@@ -63,9 +63,7 @@ export default function Exp() {
                     <AnimatedElement direction='bottom'>
                         <Image src={'/post2.png'} height={400} width={250} alt='poster' className='col-span-1' />
                     </AnimatedElement>
-                    <AnimatedElement direction='bottom'>
-                        <Image src={'/post3.png'} height={400} width={250} alt='poster' className='col-span-1' />
-                    </AnimatedElement>
+
                     <AnimatedElement direction='bottom'>
                         <Image src={'/post4.png'} height={400} width={250} alt='poster' className='col-span-1' />
                     </AnimatedElement>
