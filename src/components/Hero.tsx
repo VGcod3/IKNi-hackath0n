@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedElement from '@/hooks/AnimatedElement';
 
-import { hacked } from '@/app/fonts';
+import { hacked, rubik } from '@/app/fonts';
 import Header from './Header';
 
 import useSmoothScrollTo from '@/hooks/useSmoothScrollTo';
@@ -24,7 +24,7 @@ const navigation: MenuItem[] = [
 
 
 export default function HeroSection() {
-    const initialText = "IKNI:hackath0n";
+    const initialText = "GAME:haCK 5.0";
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
@@ -74,21 +74,24 @@ export default function HeroSection() {
 
                     <div className="text-center">
 
-                        <motion.h1
-                            onMouseEnter={startGlitchAnimation}
-                            onMouseLeave={stopGlitchAnimation}
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1 }}
-                            className={`text-4xl sm:text-7xl font-bold  transition-all tracking-widest  text-neutral-200 bg-my-bg py-4 px-6 md:px-8 rounded-lg ${hacked.className}`}
-                        >
-                            {text}
-                        </motion.h1>
+                        <AnimatedElement direction='left'>
+                            <h1 className={`text-4xl sm:text-7xl font-bold  transition-all tracking-widest  text-neutral-200 bg-my-bg py-4 px-6 md:px-8 rounded-lg ${hacked.className}`}>
+                                {text}
+                            </h1>
+                        </AnimatedElement>
+
+                        <AnimatedElement direction='bottom'>
+                            <h3 className={`text-2xl sm:text-4xl font-bold transition-all  text-neutral-200 backdrop-blur py-2 px-3 rounded-md w-fit mx-auto  ${rubik.className}`}>
+                                13 - 15 жовтня
+                            </h3>
+                        </AnimatedElement>
+
                         <AnimatedElement direction='static'>
                             <p className={`neon-handwritten-text mt-6 mb-4 text-2xl leading-8 text-white font-extralight `}>
                                 пропозиця партнерської співпраці
                             </p>
                         </AnimatedElement>
+
                         <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3">
                             <AnimatedElement direction='bottom'>
 

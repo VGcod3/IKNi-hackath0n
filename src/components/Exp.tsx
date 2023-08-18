@@ -20,7 +20,14 @@ const partners = [
     { name: "Eleks" },
     { name: "Symphony Solutions" },
     { name: "Sigma Software" },
+    { name: "N-iX" },
+    { name: "Thuundermark" },
+    { name: "AMC Bridge" },
+    { name: "Leobit" },
+    { name: "P2h" },
+    { name: "Та інші" },
 ]
+
 
 const Partner = ({ name }: partnerInfo) => {
     return (
