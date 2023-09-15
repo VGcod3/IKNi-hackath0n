@@ -24,7 +24,7 @@ const partners = [
     { name: "Thuundermark" },
     { name: "AMC Bridge" },
     { name: "Leobit" },
-    { name: "P2h" },
+    { name: "P2H" },
     { name: "Та інші" },
 ]
 
